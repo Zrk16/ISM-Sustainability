@@ -5,24 +5,43 @@
     <title>About Us</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 <body>
 
 <header style="background-color: #295F39; text-align: center; padding: 20px;">
-        <h1 style="color: white; font-size: 4rem; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 2px;">ISM SUSTAINABILITY</h1>
-    </header>
+    <h1 style="color: white; font-size: 4rem; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 2px;">ISM SUSTAINABILITY</h1>
+</header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
-        <a class="navbar-brand" href="Home page.html">About Us</a>
-        <a class="navbar-brand" href="BYOC.html">BYOC</a>
-        <a class="navbar-brand" href="Electricity.html">Electricity</a>
-        <a class="navbar-brand" href="Compost.html">Compost</a>
-        <a class="navbar-brand" href="Summary.html">Summary</a>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+    <a class="navbar-brand" href="Home page.html">About Us</a>
+    <a class="navbar-brand" href="BYOC.html">BYOC</a>
+    <a class="navbar-brand" href="Electricity.html">Electricity</a>
+    <a class="navbar-brand" href="Compost.html">Compost</a>
+    <a class="navbar-brand" href="Summary.html">Summary</a>
+</nav>
 
+<h1>Home Page</h1>
 
-    <h1>Home Page</h1>
+<div id="chat-output"></div>
+<input type="text" id="chatInput">
+<button onclick="sendMessage()">send</button>
+
+<script>
+    async function sendMessage() {
+        let msg = document.getElementById('chatInput').value;
+        document.getElementById('chatInput').value = '';
+        document.getElementById('chat-output').innerHTML += '<br>' + msg;
+
+        let response = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: msg })
+        });
+
+        let data = await response.json();
+        document.getElementById('chat-output').innerHTML += '<br>' + data.reply;
+    }
+</script>
 
 </body>
 </html>
