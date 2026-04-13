@@ -21,10 +21,37 @@
         <a class="navbar-brand" href="Summary.html">Summary</a>
     </nav>
 <div class="col-md-6 text.fs-3">
-    <h1>BYOC</h1>
-    <h3>In the Kantina ISM do not serve single use containers and support students who bring their own lunch box or water bottle.
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/watch?v=3flCSKZZfwI&t=1s"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+    <p>BYOC stands for Bring Your Own Container.
+        In the Kantina ISM do not serve single use containers and support students who bring their own lunch box or water bottle.
 
 14% of all litter is from single use beverage containers.
-</h3>
+</p>
+    <div id="chat-output"></div>
+<input type="text" id="chatInput">
+<button onclick="sendMessage()">send</button>
+
+<script>
+    async function sendMessage() {
+        let msg = document.getElementById('chatInput').value;
+        document.getElementById('chatInput').value = '';
+        document.getElementById('chat-output').innerHTML += '<br>' + msg;
+
+        let response = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: msg })
+        });
+
+        let data = await response.json();
+        document.getElementById('chat-output').innerHTML += '<br>' + data.reply;
+    }
+</script>
 </body>
 </html>
