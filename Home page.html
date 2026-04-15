@@ -22,27 +22,25 @@
 
 <h1>Home Page</h1>
 
-<div id="chat-output"></div>
-<input type="text" id="chatInput">
-<button onclick="sendMessage()">send</button>
+<!--button-->
+<button id="chatbtn" onclick="toggleChat()">💬</button>
 
-<script>
-    async function sendMessage() {
-        let msg = document.getElementById('chatInput').value;
-        document.getElementById('chatInput').value = '';
-        document.getElementById('chat-output').innerHTML += '<br>' + msg;
+<!--chatbox-->
+<div id="chatbox">
+  <div id="chatheader">ISM Sustainability Bot</div>
+  <div id="chatmsgs">
+    <div class="botmsg">Hi! Ask me about ISM sustainability.</div>
+  </div>
+  <div id="inputrow">
+    <input id="chatinput" placeholder="Type here..." onkeydown="if(event.key==='Enter') send()">
+    <button id="sendbtn" onclick="send()">➤</button>
+  </div>
+</div>
 
-        let response = await fetch('/api/chat', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message: msg })
-        });
 
-        let data = await response.json();
-        document.getElementById('chat-output').innerHTML += '<br>' + data.reply;
-    }
-</script>
 
+
+<!--fotter-->
 <header style="background-color: #f5b700; center; padding: 20px;" >
  <div style = "text-align: center">
       <h3>Contact Us</h3>
@@ -50,6 +48,38 @@
       <p >Phone: <a href="tel:+63 288408400">+63 288408400</a></p>
       <p >Address: University Parkway, Fort Bonifacio Global City, Taguig City 1634,</p>
 </div>
+
+
+
+<!--chat and api int-->
+<script>
+  function toggleChat() {
+    document.getElementById('chatbox').classList.toggle('open');
+  }
+
+  async function send() {
+    var input = document.getElementById('chatinput');
+    var msg = input.value.trim();
+    if (!msg) return;
+    input.value = '';
+
+    var msgs = document.getElementById('chatmsgs');
+    msgs.innerHTML += '<div class="usermsg">' + msg + '</div>';
+    msgs.innerHTML += '<div class="botmsg" id="typing">Typing...</div>';
+    msgs.scrollTop = msgs.scrollHeight;
+
+    var res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: msg })
+    });
+    var data = await res.json();
+
+    document.getElementById('typing').textContent = data.reply;
+    document.getElementById('typing').removeAttribute('id');
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+</script>
 
 </body>
 </html>
