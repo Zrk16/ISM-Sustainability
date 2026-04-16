@@ -5,7 +5,7 @@ body {
 h1{
     color: #285238;
     font-family: 'fantasy', fantasy !important;
-    font-size: 80px !important;
+    font-size: 80px;
 }
 p {
     padding:20px;
