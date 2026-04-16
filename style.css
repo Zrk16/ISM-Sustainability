@@ -3,14 +3,20 @@ body {
 }
 
 h1{
-    color: #285238
+    color: #285238;
+    font-family: 'fantasy', fantasy !important;
+    font-size: 80px !important;
 }
 p {
     padding:20px;
-    font-family: 'Roboto', monospace !important;
+    font-family: 'Palatino', Palatino !important;
     background-color: #D8E6D8;
     border-radius: 15px;
+    font-size: 20px;
     border: solid #295F39;
+}
+a {
+    font-family: 'fantasy', fantasy !important;
 }
 
 nav ul {
