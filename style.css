@@ -64,3 +64,5 @@ p {
 #inputrow { display:flex; border-top:1px solid #ddd; }
 #chatinput { flex:1; border:none; padding:8px; font:inherit; outline:none; }
 #sendbtn  { background:#295F39; color:white; border:none; padding:0 14px; cursor:pointer; }
+
+
