@@ -3,10 +3,20 @@ body {
 }
 
 h1{
-    color: #285238
+    color: #285238;
+    font-family: 'Platino', Platino !important;
+    font-size: 80px;
 }
 p {
     padding:20px;
+    font-family: 'Palatino', Palatino !important;
+    background-color: #D8E6D8;
+    border-radius: 15px;
+    font-size: 20px;
+    border: solid #295F39;
+}
+a {
+    font-family: 'Palatino', Palatino !important;
 }
 
 nav ul {
@@ -66,7 +76,3 @@ p {
 #sendbtn  { background:#295F39; color:white; border:none; padding:0 14px; cursor:pointer; }
 
 
-.img_right {
-
-float; right
-}
