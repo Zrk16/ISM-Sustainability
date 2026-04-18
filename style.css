@@ -53,10 +53,6 @@ height: 40px
     flex-direction: column;
   }
 }
-p {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
 /* chatbot stuf */
 #chatbtn { position:fixed; bottom:24px; right:24px; width:50px; height:50px; background:#295F39; color:white; border:none; border-radius:50%; font-size:22px; cursor:pointer; }
 
