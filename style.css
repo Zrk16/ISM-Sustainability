@@ -7,17 +7,33 @@ h1{
     font-family: 'Platino', Platino !important;
     font-size: 80px;
 }
+.title-container {
+    display: flex;
+    align-items: center;
+}
 p {
     padding:20px;
     font-family: 'Palatino', Palatino !important;
     background-color: #D8E6D8;
     border-radius: 15px;
     font-size: 20px;
-    border: solid #295F39;
+    border: 8px double #295F39;
 }
 a {
     font-family: 'Palatino', Palatino !important;
 }
+.card{
+    padding: 10px;
+    background-color: #9ec1a3 !important;
+    border: solid #9ec1a3 !important;
+
+}
+.card-body {
+    border-radius: 15px;
+    border: 8px double #295F39;
+    background-color: #D8E6D8;
+}
+
 
 nav ul {
   display: flex;
