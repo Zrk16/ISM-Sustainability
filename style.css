@@ -2,7 +2,9 @@ body {
     overflow-x: hidden;
     background: #9ec1a3;
 }
-
+header {
+    background: linear-gradient(to bottom, #295F39, #184D29);
+}
 h1{
     color: #285238;
     font-family: 'Platino', Platino !important;
