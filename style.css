@@ -80,15 +80,25 @@ height: 40px
   height: 315px;
   border-radius: 15px;
 }
-.text-content {
-  min-width: 550px;
-}
-footer{
-    border-radius:15px 15px 0px 0px;
-}
+
 @media (max-width: 768px) {
   .row-container {
     flex-direction: column;
+  }
+
+  .text-content {
+    min-width: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-content p {
+    padding: 10px;           /* smaller padding on mobile */
+    font-size: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;         /* ensures box doesn't exceed column */
+    box-sizing: border-box;  /* includes padding in width */
   }
 }
 /* chatbot stuf */
