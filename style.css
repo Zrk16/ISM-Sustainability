@@ -5,6 +5,10 @@ body {
 header {
     background: linear-gradient(to bottom, #295F39, #12361c);
 }
+.navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 h1{
     color: #285238;
     font-family: 'Platino', Platino !important;
