@@ -1,11 +1,33 @@
 body {
-    background-color: #9ec1a3;
+    overflow-x: hidden;
+    background: #9ec1a3;
 }
-
+header {
+    background: linear-gradient(to bottom, #295F39, #12361c);
+}
+.navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 h1{
     color: #285238;
     font-family: 'Platino', Platino !important;
     font-size: 80px;
+}
+h3{
+    color: #285238 !important;
+
+}
+.center-text {
+  text-align: center;
+
+}
+.title-container {
+    display: flex;
+    align-items: center;
+}
+img{
+    border-radius: 15px;
 }
 p {
     padding:20px;
@@ -13,10 +35,24 @@ p {
     background-color: #D8E6D8;
     border-radius: 15px;
     font-size: 20px;
-    border: solid #295F39;
+    border: 8px double #C5D4C5;
 }
 a {
     font-family: 'Palatino', Palatino !important;
+}
+.card{
+    padding: 10px;
+    background-color: #9ec1a3 !important;
+    border: solid #9ec1a3 !important;
+
+}
+.card-body {
+    border-radius: 15px;
+    border: 8px double #C5D4C5;
+    background-color: #D8E6D8;
+}
+.card-text{
+    border: 8px solid #D8E6D8;
 }
 
 nav ul {
@@ -42,21 +78,19 @@ height: 40px
 .video-wrapper iframe {
   width: 560;
   height: 315px;
-  border-radius: 8px;
+  border-radius: 15px;
 }
 .text-content {
   min-width: 550px;
 }
-
+footer{
+    border-radius:15px 15px 0px 0px;
+}
 @media (max-width: 768px) {
   .row-container {
     flex-direction: column;
   }
 }
-p {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
 /* chatbot stuf */
 #chatbtn { position:fixed; bottom:24px; right:24px; width:50px; height:50px; background:#295F39; color:white; border:none; border-radius:50%; font-size:22px; cursor:pointer; }
 
