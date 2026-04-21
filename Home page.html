@@ -4,114 +4,117 @@
     <meta charset="UTF-8">
     <title>About Us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css new.css">
 </head>
-<header style=" text-align: center; padding: 50px; padding-left: 50px; line-height: 0;">
+<body style="background-color: #9ec1a3;">
+<header style="background-color: #295F39; text-align: center; padding: 50px; line-height: 0;">
     <a href="Home page.html">
-        <img src="ISMlogo.png" alt="IMAGE" width="150" style="display: inline-block; vertical-align: middle;">
+        <img src="ISMlogo.png" alt="logo" width="150" style="display: inline-block; vertical-align: middle;">
     </a>
-        <h1 style="display: inline-block; vertical-align: middle; color: white; font-size: 4rem; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 2px; line-height: 1; margin-left: 20px; border-bottom: 2px solid white; padding-bottom: 10px;">
-    ISM SUSTAINABILITY
-  </h1>
+    <h1 style="display: inline-block; vertical-align: middle; color: white; font-size: 4rem; margin: 0 0 0 20px; font-family: sans-serif; letter-spacing: 2px;">ISM SUSTAINABILITY</h1>
 </header>
-<body style ="background-color: #9ec1a3" >
-  <nav class="navbar navbar-expand-lg bg-warning">
-    <div class="container-fluid justify-content-center align-items-center flex-wrap">
-      <a class="btn btn-outline-light mx-3 fw-bold"
-         href="Home page.html"
-         style="border: solid white !important;">
-        About Us
-      </a>
-      <a class="btn btn-outline-light btn-no-border mx-3" href="BYOC.html">BYOC</a>
-      <a class="btn btn-outline-light btn-no-border mx-3" href="Electricity.html">Electricity</a>
-      <a class="btn btn-outline-light btn-no-border mx-3" href="Compost.html">Compost</a>
-      <a class="btn btn-outline-light btn-no-border mx-3" href="Summary.html">Summary</a>
+
+<nav class="navbar navbar-expand-lg bg-warning">
+    <div class="container-fluid justify-content-center">
+        <a class="navbar-brand text-white mx-3" href="Home page.html" style="font-weight:bold; font-size:30px;">About Us</a>
+        <a class="navbar-brand text-white mx-3" href="BYOC.html">BYOC</a>
+        <a class="navbar-brand text-white mx-3" href="Electricity.html">Electricity</a>
+        <a class="navbar-brand text-white mx-3" href="Compost.html">Compost</a>
+        <a class="navbar-brand text-white mx-3" href="Summary.html">Summary</a>
     </div>
-  </nav>
-<h1 style="margin-top: 10px;margin-right: 10px;margin-left: 20px;" >Home Page</h1>
+</nav>
 
 <div class="container my-5">
-    <div class="row align-items-center">
-        <div class="col-md-7">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0MUFFjRHflIi2yLCVaC780fv1Q17_FUdcVQ&s" class="img-fluid rounded shadow" style="width: 100%;" alt="ISM Green Campus">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold" style="color: var(--primary-green); text-transform: uppercase; letter-spacing: 2px; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">Home Page</h1>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Image moved up and expanded -->
+        <div class="col-lg-10 mb-5">
+            <img src="https://primer.com.ph/blog/wp-content/uploads/sites/14/2020/02/IS-Manila-Fort-Bonifacio-1024x559.jpg" class="img-fluid rounded shadow w-100" style="object-fit: cover; max-height: 500px;" alt="ISM Green Campus">
         </div>
-        <div class="col-md-5">
-            <h2 style="margin-top: 10px;margin-bottom: 10px;margin-right: 10px;" >Our Commitment to Sustainability</h2>
-            <p  style="font-size: 23px; margin-top: 0px;margin-bottom: 10px;margin-right: 10px">International School Manila (ISM) is deeply committed to environmental sustainability. As a leading "green school," we strive to integrate sustainability into every aspect of campus life, from our classroom curriculums to our daily operations.</p>
-            <p  style="font-size: 23px; margin-top: 0px;margin-bottom: 10px;margin-right: 10px">We believe that fostering an eco-conscious mindset in our students is vital for the future. Through various initiatives in waste reduction, energy efficiency, and community programs, ISM continues to pave the way for a more sustainable and greener future for all.</p>
+        
+        <!-- Text below the image, forming a better block -->
+        <div class="col-lg-10">
+            <h2 class="mb-4 text-center">Our Commitment to Sustainability</h2>
+            <p class="mb-4">International School Manila (ISM) is deeply committed to environmental sustainability. As a leading "green school," we strive to integrate sustainability into every aspect of campus life, from our classroom to our daily lives.</p>
+            <p>We believe that fostering an eco-conscious mindset in our students is vital for the future. Through various initiatives in waste reduction, energy, and community programs, ISM continues to pave the way for a more sustainable and greener future for all.</p>
         </div>
     </div>
 </div>
 
-<!--button-->
-<button id="chatbtn" onclick="toggleChat()">💬</button>
-
-<!--chatbox-->
+<!-- Chatbot -->
+<button id="chatbtn" onclick="toggleChat()">Chat</button>
 <div id="chatbox">
-  <div id="chatheader">ISM Sustainability Bot</div>
+  <div id="chatheader">ISM Sustainability Support</div>
   <div id="chatmsgs">
-    <div class="botmsg">Hi! Ask me about ISM sustainability.</div>
+    <div class="botmsg">Hello. How can I assist you with ISM sustainability information?</div>
   </div>
   <div id="inputrow">
-    <input id="chatinput" placeholder="Type here..." onkeydown="if(event.key==='Enter') send()">
-    <button id="sendbtn" onclick="send()">➤</button>
+    <input id="chatinput" placeholder="Enter your query..." onkeydown="if(event.key==='Enter') send()">
+    <button id="sendbtn" onclick="send()">Send</button>
   </div>
 </div>
 
-
-
-
-
-
-
-<!--chat and api int-->
 <script>
-  function toggleChat() {
-    document.getElementById('<chatb></chatb>ox').classList.toggle('open');
+  function toggleChat() { 
+      var box = document.getElementById('chatbox');
+      // I couldn't figure out toggle so I just used an if statement
+      if (box.className == 'open') {
+          box.className = '';
+      } else {
+          box.className = 'open';
+      }
   }
-
+  
   async function send() {
     var input = document.getElementById('chatinput');
-    var msg = input.value.trim();
-    if (!msg) return;
+    var msg = input.value;
+    
+    if (msg == "") {
+        return; // do nothing if it's empty
+    }
+    
     input.value = '';
-
+    
     var msgs = document.getElementById('chatmsgs');
-    msgs.innerHTML += '<div class="usermsg">' + msg + '</div>';
-    msgs.innerHTML += '<div class="botmsg" id="typing">Typing...</div>';
+    
+    // add user message
+    msgs.innerHTML = msgs.innerHTML + '<div class="usermsg">' + msg + '</div>';
+    
+    // add typing indicator
+    msgs.innerHTML = msgs.innerHTML + '<div class="botmsg" id="typing">Typing...</div>';
+    
+    // scroll down
     msgs.scrollTop = msgs.scrollHeight;
-
-    var res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: msg })
+    
+    // Send to API
+    var res = await fetch('/api/chat', { 
+        method: 'POST', 
+        headers: { 
+            'Content-Type': 'application/json' 
+        }, 
+        body: JSON.stringify({ message: msg }) 
     });
+    
     var data = await res.json();
-
-    document.getElementById('typing').textContent = data.reply;
-    document.getElementById('typing').removeAttribute('id');
-    msgs.scrollTop = msgs.scrollHeight;
+    
+    var typing = document.getElementById('typing');
+    typing.innerHTML = data.reply; // Replace typing text with the actual reply
+    typing.id = ''; // remove the ID so next time works
+    
+    // scroll down again just in case
+    var msgs2 = document.getElementById('chatmsgs');
+    msgs2.scrollTop = msgs2.scrollHeight;
   }
 </script>
 
-
-<footer style="background-color: #f5b700; padding: 10px;">
-  <div style="text-align: center; line-height: 0;">
+<footer style="background-color: #f5b700; padding: 10px; text-align: center;">
     <h3 style="margin: 5px 0">Contact Us</h3>
-
-    <p style="margin: 0px ; font-size: 13px; background-color: #f5b700; border: solid #f5b700;">
-      Email: <a href="mailto:comms@ismanila.org">comms@ismanila.org</a>
-    </p>
-
-    <p style="margin: 0px ; font-size: 13px; background-color: #f5b700; border: solid #f5b700;">
-      Phone: <a href="tel:+63288408400">+63 288408400</a>
-    </p>
-
-    <p style="margin: 1px 0; font-size: 13px; background-color: #f5b700; border: solid #f5b700;">
-      Address: University Parkway, Fort Bonifacio Global City, Taguig City 1634
-    </p>
-  </div>
+    <p style="margin: 0; font-size: 13px; background-color: #f5b700; border: solid #f5b700;">Email: <a href="mailto:comms@ismanila.org">comms@ismanila.org</a></p>
+    <p style="margin: 0; font-size: 13px; background-color: #f5b700; border: solid #f5b700;">Phone: <a href="tel:+63288408400">+63 288408400</a></p>
+    <p style="margin: 1px 0; font-size: 13px; background-color: #f5b700; border: solid #f5b700;">Address: University Parkway, Fort Bonifacio Global City, Taguig City</p>
 </footer>
-
 </body>
 </html>
