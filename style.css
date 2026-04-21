@@ -118,6 +118,10 @@ height: 40px
     box-sizing: border-box;
   }
 }
+.btn-primary {
+    background-color: #285238 !important;
+    border-color: #285238 !important;
+}
 .btn-primary:hover {
     background-color: #F5B700 !important;
     border: solid #F5B700 !important;
