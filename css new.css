@@ -1,16 +1,14 @@
 /* Google Fonts: Import Inter for body text and Outfit for headings */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap');
 
-/* GLOBAL COLORS: Updated to official ISM Green #1E4C2B */
 :root {
-    --primary-green: #1E4C2B; /* Official ISM Everglade Green */
-    --gold: #F5B700;           /* School Yellow/Gold */
+    --primary-green: #1E4C2B; 
+    --gold: #F5B700;         
     --body-text: #2C3E50;
-    --canvas-bg: #9ec1a3;      /* Solid Green Background */
+    --canvas-bg: #9ec1a3;      
     --block-bg: rgba(255, 255, 255, 0.95);
 }
 
-/* BASE PAGE STYLES: Switched to Plus Jakarta Sans */
 body {
     background-color: var(--canvas-bg);
     color: var(--body-text);
@@ -20,14 +18,14 @@ body {
     min-height: 100vh;
 }
 
-/* ALL HEADINGS */
+/*  */
 h1, h2, h3, h4 {
     font-family: 'Outfit', sans-serif;
     color: var(--primary-green);
     letter-spacing: -0.5px;
 }
 
-/* PAGE HEADER */
+
 header {
     background-color: var(--primary-green) !important;
     padding: 60px 20px !important;
@@ -35,15 +33,14 @@ header {
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-/* HEADER MAIN TITLE */
+
 header h1 {
     color: white !important;
     font-weight: 700 !important;
     text-transform: uppercase;
     font-size: 4.5rem !important;
 }
-
-/* NAVIGATION BAR: Liquid Glass refined for readability */
+/*new navbar*/
 .navbar {
     background-color: rgba(255, 255, 255, 0.25) !important;
     backdrop-filter: blur(20px);
@@ -68,20 +65,18 @@ header h1 {
 
 /* NAVBAR HOVER */
 .navbar-brand:hover {
-    color: #12301b !important; /* Slightly darker on hover */
+    color: #12301b !important; 
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 6px;
 }
 
-/* PAGE WRAPPERS */
 .container {
     margin-top: 60px;
     margin-bottom: 80px;
     max-width: 1100px !important;
 }
 
-/* TITLE IN CONTENT */
 h1#home-page-title {
     text-align: center;
     margin-bottom: 50px !important;
@@ -89,7 +84,6 @@ h1#home-page-title {
     text-transform: uppercase;
 }
 
-/* TEXT BLOCKS: Restored definition and size */
 p {
     background-color: var(--block-bg) !important;
     border-radius: 8px !important;
@@ -101,20 +95,17 @@ p {
     box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
 
-/* ALL IMAGES: Standardized with depth */
 img {
     border-radius: 8px !important;
     border: 1px solid #ccc;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* HERO IMAGE SPECIFIC */
 .img-hero {
     margin-bottom: 50px !important;
     border: 4px solid white !important;
 }
 
-/* CHAT BUTTON */
 #chatbtn { 
     position: fixed; 
     bottom: 30px; 
@@ -139,7 +130,6 @@ img {
     background-color: #12301b !important;
 }
 
-/* CHAT WINDOW */
 #chatbox { 
     display: none; 
     position: fixed; 
@@ -155,12 +145,10 @@ img {
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* CHAT OPEN STATE */
 #chatbox.open {
     display: flex !important;
 }
 
-/* CHAT HEADER */
 #chatheader { 
     background-color: var(--primary-green) !important; 
     color: white !important; 
@@ -171,7 +159,6 @@ img {
     border-bottom: 4px solid var(--gold);
 }
 
-/* CHAT MESSAGE AREA */
 #chatmsgs { 
     flex: 1; 
     overflow-y: auto; 
@@ -182,7 +169,6 @@ img {
     background-color: #f7faf7 !important; 
 }
 
-/* USER CHAT BUBBLE */
 .usermsg { 
     align-self: flex-end; 
     background-color: var(--primary-green) !important; 
@@ -192,7 +178,6 @@ img {
     max-width: 85%;
 }
 
-/* BOT CHAT BUBBLE */
 .botmsg { 
     align-self: flex-start; 
     background-color: white !important; 
@@ -203,7 +188,6 @@ img {
     color: var(--body-text) !important;
 }
 
-/* CHAT INPUT AREA */
 #inputrow { 
     display: flex; 
     padding: 15px;
@@ -212,7 +196,6 @@ img {
     gap: 10px;
 }
 
-/* CHAT INPUT BAR */
 #chatinput { 
     flex: 1; 
     border: 1px solid #ddd; 
@@ -222,7 +205,6 @@ img {
     font-size: 1rem;
 }
 
-/* CHAT SEND BUTTON */
 #sendbtn { 
     background-color: var(--primary-green) !important; 
     color: white !important; 
@@ -233,7 +215,6 @@ img {
     cursor: pointer !important; 
 }
 
-/* FOOTER SECTION: Restored to School Yellow */
 footer {
     background-color: var(--gold) !important;
     padding: 60px 20px !important;
@@ -242,7 +223,6 @@ footer {
     text-align: center;
 }
 
-/* FOOTER TITLES */
 footer h3 {
     text-transform: uppercase;
     font-weight: 800;
@@ -251,7 +231,6 @@ footer h3 {
     color: var(--primary-green);
 }
 
-/* FOOTER PARAGRAPHS */
 footer p {
     background: transparent !important;
     border: none !important;
@@ -261,7 +240,6 @@ footer p {
     color: var(--primary-green) !important;
 }
 
-/* FOOTER LINKS */
 footer a {
     color: var(--primary-green);
     font-weight: 700;
@@ -269,9 +247,9 @@ footer a {
     text-decoration-thickness: 2px;
 }
 
-/* TABLET/MOBILE STYLES: Corrected Syntax */
 @media (max-width: 768px) {
     p { font-size: 1.1rem !important; padding: 25px !important; }
     header h1 { font-size: 2.8rem !important; }
     .navbar-brand { margin: 0 10px !important; font-size: 1.1rem !important; }
 }
+
