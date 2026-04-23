@@ -17,7 +17,7 @@ def chat():
 
     r = requests.post(
         "https://integrate.api.nvidia.com/v1/chat/completions",
-        headers={"Authorization": "Bearer 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", "Content-Type": "application/json"},
+        headers={"Authorization": "Bearer nvapi-REMOVEDAPIFORSECURITY", "Content-Type": "application/json"},
         json={
             "model": "meta/llama-3.1-8b-instruct",
             "messages": [
