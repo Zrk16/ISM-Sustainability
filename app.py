@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import requests
+import os
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 
@@ -15,9 +16,10 @@ def serve_file(filename):
 def chat():
     msg = request.json['message']
 
+    api_key = os.environ.get("NVIDIA_API_KEY", "")
     r = requests.post(
         "https://integrate.api.nvidia.com/v1/chat/completions",
-        headers={"Authorization": "Bearer nvapi-REMOVEDAPIFORSECURITY", "Content-Type": "application/json"},
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
         json={
             "model": "meta/llama-3.1-8b-instruct",
             "messages": [
@@ -30,4 +32,5 @@ def chat():
     answer = r.json()['choices'][0]['message']['content']
     return jsonify({'reply': answer})
 
-app.run(port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(port=5000, debug=True)
